@@ -1,10 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+import AssetList from './components/AssetsList';
+
+const installedSystems = require('./DevicesList.json');
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+
+      <AssetList installedSystems={installedSystems} />
+
       <StatusBar style="auto" />
     </View>
   );
